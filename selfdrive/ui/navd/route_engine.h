@@ -53,4 +53,5 @@ private slots:
 
 signals:
   void positionUpdated(QMapbox::Coordinate position, float bearing);
+  void routeUpdated(QList<QGeoCoordinate> coordinates);
 };
