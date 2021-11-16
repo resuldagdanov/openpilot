@@ -21,7 +21,8 @@ public:
   SubMaster *sm;
   PubMaster *pm;
 
-  QTimer* timer;
+  QTimer* msg_timer;
+  QTimer* route_timer;
 
   std::optional<int> ui_pid;
 
@@ -46,7 +47,8 @@ public:
   bool shouldRecompute();
 
 private slots:
-  void timerUpdate();
+  void routeUpdate();
+  void msgUpdate();
   void routeCalculated(QGeoRouteReply *reply);
   void recomputeRoute();
   void sendRoute();
