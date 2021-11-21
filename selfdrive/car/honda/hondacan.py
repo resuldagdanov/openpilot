@@ -152,8 +152,6 @@ def create_ui_commands(packer, pcm_speed, hud, car_fingerprint, is_metric, idx, 
   else:
     commands.append(packer.make_can_msg('LKAS_HUD', bus_lkas, lkas_hud_values, idx))
 
-  commands.append(packer.make_can_msg('LKAS_HUD', bus_lkas, lkas_hud_values, idx))
-
   if radar_disabled and car_fingerprint in HONDA_BOSCH:
     radar_hud_values = {
       'CMBS_OFF': 0x01,
